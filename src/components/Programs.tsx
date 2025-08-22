@@ -24,47 +24,48 @@ const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-16 lg:py-24 bg-secondary" aria-labelledby="programs-title">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 id="programs-title" className="section-title text-foreground mb-6">
-            Explore Our Specialized Programs for Every Child
+    <section id="programs" className="luxury-spacing bg-secondary" aria-labelledby="programs-title">
+      <div className="max-w-6xl mx-auto px-8 lg:px-12">
+        <div className="text-center mb-20">
+          <h2 id="programs-title" className="section-title text-foreground mb-8 animate-fade-in">
+            Specialized Programs for Every Child
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
             At Marse, we offer a range of programs designed to support the unique needs of each child. Our individualized education plans, speech and occupational therapy, and after-school support ensure that every student receives the attention and care they deserve.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {programs.map((program, index) => {
             const IconComponent = program.icon;
             return (
               <div
                 key={index}
-                className="bg-card rounded-lg shadow-card hover:shadow-elevated transition-all duration-300 p-8 border border-border group"
+                className="premium-card rounded-sm p-10 group animate-scale-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6 group-hover:bg-primary/20 transition-colors">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary/5 rounded-sm mb-8 group-hover:bg-primary/10 transition-all duration-500">
                   <IconComponent className="w-8 h-8 text-primary" aria-hidden="true" />
                 </div>
                 
-                <h3 className="card-title text-foreground mb-4">
+                <h3 className="text-xl font-display font-medium text-foreground mb-6 tracking-luxury leading-tight">
                   {program.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-8 leading-relaxed font-light">
                   {program.description}
                 </p>
                 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-10">
                   {program.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" aria-hidden="true"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground font-light">
+                      <div className="w-2 h-2 bg-accent rounded-full mr-4 flex-shrink-0" aria-hidden="true"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <Button variant="outline" className="w-full">
+                <Button variant="minimal" className="w-full">
                   Learn More
                 </Button>
               </div>

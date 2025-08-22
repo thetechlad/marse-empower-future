@@ -35,13 +35,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-background" aria-labelledby="testimonials-title">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 id="testimonials-title" className="section-title text-foreground mb-6">
+    <section className="luxury-spacing bg-background" aria-labelledby="testimonials-title">
+      <div className="max-w-6xl mx-auto px-8 lg:px-12">
+        <div className="text-center mb-20">
+          <h2 id="testimonials-title" className="section-title text-foreground mb-8 animate-fade-in">
             What Parents Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
             Our families share their inspiring journeys with Marse.
           </p>
         </div>
@@ -50,21 +50,22 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg shadow-card hover:shadow-elevated transition-all duration-300 p-6 border border-border"
+              className="premium-card rounded-sm p-8 animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start mb-4">
-                <Quote className="w-6 h-6 text-accent mr-2 flex-shrink-0 mt-1" aria-hidden="true" />
-                <blockquote className="text-muted-foreground leading-relaxed">
+              <div className="flex items-start mb-8">
+                <Quote className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" aria-hidden="true" />
+                <blockquote className="text-muted-foreground leading-relaxed font-light italic text-lg">
                   "{testimonial.quote}"
                 </blockquote>
               </div>
               
-              <div className="border-t border-border pt-4">
+              <div className="border-t border-border pt-6">
                 <cite className="not-italic">
-                  <div className="font-semibold text-foreground">
+                  <div className="font-display font-medium text-foreground text-lg tracking-luxury">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-muted-foreground font-light mt-1 tracking-wide uppercase">
                     {testimonial.role}
                   </div>
                 </cite>

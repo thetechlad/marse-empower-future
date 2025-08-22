@@ -2,119 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Marse School Design System - Professional, Accessible, Warm */
+/* Tom Ford Inspired Design System - Sophisticated Luxury Minimalism */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Professional backgrounds */
+    /* Sophisticated monochrome palette */
     --background: 0 0% 100%;
-    --foreground: 210 24% 16%;
+    --foreground: 0 0% 8%;
 
-    /* Card system */
+    /* Pure luxury cards */
     --card: 0 0% 100%;
-    --card-foreground: 210 24% 16%;
+    --card-foreground: 0 0% 8%;
 
-    /* Popover system */
+    /* Elegant popovers */
     --popover: 0 0% 100%;
-    --popover-foreground: 210 24% 16%;
+    --popover-foreground: 0 0% 8%;
 
-    /* Trust-inspiring blue primary */
-    --primary: 203 56% 34%;
-    --primary-light: 203 56% 45%;
+    /* Deep charcoal primary */
+    --primary: 0 0% 8%;
+    --primary-light: 0 0% 15%;
     --primary-foreground: 0 0% 100%;
 
-    /* Warm secondary tones */
-    --secondary: 210 20% 98%;
-    --secondary-foreground: 210 24% 16%;
+    /* Sophisticated secondary */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 8%;
 
-    /* Professional muted tones */
-    --muted: 210 20% 98%;
-    --muted-foreground: 210 16% 46%;
+    /* Refined muted tones */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Warm coral accent */
-    --accent: 15 86% 65%;
-    --accent-light: 15 86% 75%;
-    --accent-foreground: 0 0% 100%;
+    /* Luxurious gold accent */
+    --accent: 45 100% 51%;
+    --accent-light: 45 100% 60%;
+    --accent-foreground: 0 0% 8%;
 
-    /* Success green for positive actions */
-    --success: 142 76% 36%;
+    /* Success in deep green */
+    --success: 120 100% 25%;
     --success-foreground: 0 0% 100%;
 
-    /* Calm destructive */
-    --destructive: 0 84% 60%;
+    /* Subtle destructive */
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Professional borders */
-    --border: 210 20% 92%;
-    --input: 210 20% 92%;
-    --ring: 203 56% 34%;
+    /* Minimal borders */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 8%;
 
-    /* Smooth radius for accessibility */
-    --radius: 0.5rem;
+    /* Clean radius */
+    --radius: 0.25rem;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(203 56% 34%), hsl(203 56% 45%));
-    --gradient-warm: linear-gradient(135deg, hsl(15 86% 65%), hsl(15 86% 75%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 100% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
 
-    /* Professional shadows */
-    --shadow-card: 0 2px 8px -2px hsl(210 24% 16% / 0.08);
-    --shadow-elevated: 0 8px 25px -5px hsl(210 24% 16% / 0.12);
-    --shadow-hero: 0 20px 60px -15px hsl(203 56% 34% / 0.15);
+    /* Sophisticated shadows */
+    --shadow-luxury: 0 1px 3px hsl(0 0% 0% / 0.05);
+    --shadow-elevated: 0 4px 12px hsl(0 0% 0% / 0.08);
+    --shadow-premium: 0 8px 30px hsl(0 0% 0% / 0.12);
 
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Tom Ford transitions */
+    --transition-elegant: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-swift: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 8%;
   }
 
   .dark {
-    --background: 210 24% 16%;
-    --foreground: 0 0% 100%;
-    --card: 210 24% 16%;
-    --card-foreground: 0 0% 100%;
-    --popover: 210 24% 16%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 203 56% 45%;
-    --primary-light: 203 56% 55%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 24% 20%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 210 24% 20%;
-    --muted-foreground: 210 16% 65%;
-    --accent: 15 86% 65%;
-    --accent-light: 15 86% 75%;
-    --accent-foreground: 0 0% 100%;
-    --success: 142 76% 45%;
-    --success-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 210 24% 25%;
-    --input: 210 24% 25%;
-    --ring: 203 56% 45%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-light: 0 0% 85%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 45 100% 51%;
+    --accent-light: 45 100% 60%;
+    --accent-foreground: 0 0% 8%;
+    --success: 120 100% 35%;
+    --success-foreground: 0 0% 8%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 95%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 95%;
   }
 }
 
@@ -124,27 +119,80 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-family: 'Playfair Display', serif;
+    @apply font-medium tracking-tight;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   .hero-text {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   .card-title {
-    @apply text-xl font-semibold;
+    @apply text-xl font-medium;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.01em;
   }
 
   .accessibility-focus {
-    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-1 focus:ring-ring focus:ring-offset-2;
+  }
+
+  /* Tom Ford signature underline animation */
+  .signature-link {
+    @apply relative inline-block;
+  }
+  
+  .signature-link::after {
+    content: '';
+    @apply absolute w-full h-px bottom-0 left-0 bg-accent;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .signature-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Luxury spacing */
+  .luxury-spacing {
+    @apply py-20 lg:py-32;
+  }
+
+  /* Premium cards */
+  .premium-card {
+    @apply bg-card border border-border shadow-luxury hover:shadow-elevated;
+    transition: var(--transition-elegant);
+  }
+
+  .premium-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
