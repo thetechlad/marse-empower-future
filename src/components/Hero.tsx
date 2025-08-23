@@ -4,17 +4,19 @@ const Hero = () => {
   return (
     <section className="relative bg-gradient-subtle luxury-spacing overflow-hidden" aria-labelledby="hero-title">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-20"
+          preload="metadata"
+          poster="/placeholder.svg"
+          className="w-full h-full object-cover opacity-60"
         >
           <source src="/marse-intro.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-background/80"></div>
+        <div className="absolute inset-0 bg-background/40"></div>
       </div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-8 lg:px-12 text-center">
