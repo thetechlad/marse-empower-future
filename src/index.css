@@ -4,7 +4,7 @@
 
 /* Tom Ford Inspired Design System - Sophisticated Luxury Minimalism */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -120,37 +120,37 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
-    letter-spacing: -0.01em;
+    letter-spacing: 0em;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    @apply font-medium tracking-tight;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    font-family: 'Fredoka', sans-serif;
+    @apply font-medium tracking-normal;
+    letter-spacing: 0em;
+    line-height: 1.3;
   }
 
   .hero-text {
-    @apply text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    @apply text-5xl md:text-6xl lg:text-7xl font-medium tracking-normal;
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0em;
+    line-height: 1.2;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium tracking-normal;
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0em;
+    line-height: 1.3;
   }
 
   .card-title {
     @apply text-xl font-medium;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.01em;
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0em;
   }
 
   .accessibility-focus {

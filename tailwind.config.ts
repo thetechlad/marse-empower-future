@@ -147,8 +147,8 @@ export default {
 				'luxury-slide': 'luxury-slide 0.8s cubic-bezier(0.23, 1, 0.32, 1)'
 			},
 			fontFamily: {
-				'display': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'system-ui', 'sans-serif']
+				'display': ['Fredoka', 'sans-serif'],
+				'sans': ['Nunito', 'system-ui', 'sans-serif']
 			},
 			letterSpacing: {
 				'tighter': '-0.05em',
