@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, MessageCircle, Users } from "lucide-react";
+import creativeActivities from "@/assets/creative-activities.jpg";
+import physicalTherapy from "@/assets/physical-therapy.jpg";
+import medicalCare from "@/assets/medical-care.jpg";
 
 const Programs = () => {
   const programs = [
@@ -38,36 +41,47 @@ const Programs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {programs.map((program, index) => {
             const IconComponent = program.icon;
+            const programImage = index === 0 ? creativeActivities : index === 1 ? physicalTherapy : medicalCare;
             return (
               <div
                 key={index}
-                className="premium-card rounded-sm p-10 group animate-scale-in"
+                className="premium-card rounded-sm overflow-hidden group animate-scale-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-primary/5 rounded-sm mb-8 group-hover:bg-primary/10 transition-all duration-500">
-                  <IconComponent className="w-8 h-8 text-primary" aria-hidden="true" />
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={programImage}
+                    alt={program.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 
-                <h3 className="text-xl font-display font-medium text-foreground mb-6 tracking-luxury leading-tight">
-                  {program.title}
-                </h3>
-                
-                <p className="text-muted-foreground mb-8 leading-relaxed font-light">
-                  {program.description}
-                </p>
-                
-                <ul className="space-y-3 mb-10">
-                  {program.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground font-light">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-4 flex-shrink-0" aria-hidden="true"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button variant="minimal" className="w-full">
-                  Learn More
-                </Button>
+                <div className="p-10">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/5 rounded-sm mb-8 group-hover:bg-primary/10 transition-all duration-500">
+                    <IconComponent className="w-8 h-8 text-primary" aria-hidden="true" />
+                  </div>
+                  
+                  <h3 className="text-xl font-display font-medium text-foreground mb-6 tracking-luxury leading-tight">
+                    {program.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground mb-8 leading-relaxed font-light">
+                    {program.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-10">
+                    {program.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground font-light">
+                        <div className="w-2 h-2 bg-accent rounded-full mr-4 flex-shrink-0" aria-hidden="true"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button variant="minimal" className="w-full">
+                    Learn More
+                  </Button>
+                </div>
               </div>
             );
           })}

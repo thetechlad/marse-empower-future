@@ -2,8 +2,22 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-subtle luxury-spacing" aria-labelledby="hero-title">
-      <div className="max-w-6xl mx-auto px-8 lg:px-12 text-center">
+    <section className="relative bg-gradient-subtle luxury-spacing overflow-hidden" aria-labelledby="hero-title">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-20"
+        >
+          <source src="https://marse.pk/assets/MasreIntro-f57d3924.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/80"></div>
+      </div>
+      
+      <div className="relative z-10 max-w-6xl mx-auto px-8 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 
             id="hero-title" 

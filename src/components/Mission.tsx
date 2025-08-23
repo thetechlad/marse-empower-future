@@ -1,3 +1,5 @@
+import studentAchievements from "@/assets/student-achievements.jpg";
+
 const Mission = () => {
   const stats = [
     {
@@ -34,24 +36,44 @@ const Mission = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-8 premium-card rounded-sm animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-5xl lg:text-6xl font-display font-medium text-primary mb-4 tracking-tighter">
-                {stat.number}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center p-8 premium-card rounded-sm animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-5xl lg:text-6xl font-display font-medium text-primary mb-4 tracking-tighter">
+                  {stat.number}
+                </div>
+                <div className="text-lg font-medium text-foreground mb-4 tracking-wide uppercase text-sm">
+                  {stat.label}
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">
+                  {stat.description}
+                </p>
               </div>
-              <div className="text-lg font-medium text-foreground mb-4 tracking-wide uppercase text-sm">
-                {stat.label}
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed font-light">
-                {stat.description}
-              </p>
+            ))}
+          </div>
+          
+          <div className="relative animate-scale-in">
+            <div className="aspect-[4/3] rounded-sm overflow-hidden">
+              <img 
+                src={studentAchievements}
+                alt="Students celebrating achievements at MARSE"
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent rounded-sm flex items-end">
+              <div className="p-8 text-left w-full">
+                <h3 className="text-2xl font-display text-foreground mb-2 tracking-luxury">Celebrating Success</h3>
+                <p className="text-foreground/90 font-light text-sm leading-relaxed">
+                  Every achievement is a milestone towards independence and confidence.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
