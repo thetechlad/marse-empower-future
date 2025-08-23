@@ -12,7 +12,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover opacity-20"
         >
-          <source src="https://marse.pk/assets/MasreIntro-f57d3924.mp4" type="video/mp4" />
+          <source src="/marse-intro.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-background/80"></div>
       </div>
