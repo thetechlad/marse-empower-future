@@ -19,22 +19,40 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-12" role="navigation" aria-label="Main navigation">
+          <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
             <a 
-              href="#mission" 
-              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-4 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+              href="#about" 
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
             >
-              Our Mission
+              About
             </a>
             <a 
               href="#programs" 
-              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-4 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
             >
               Programs
             </a>
             <a 
+              href="#gallery" 
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+            >
+              Gallery
+            </a>
+            <a 
+              href="#events" 
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+            >
+              Events
+            </a>
+            <a 
+              href="#staff" 
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+            >
+              Staff
+            </a>
+            <a 
               href="#contact" 
-              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-4 py-2 font-medium tracking-wide uppercase text-sm signature-link"
+              className="text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm px-3 py-2 font-medium tracking-wide uppercase text-sm signature-link"
             >
               Contact
             </a>
@@ -70,11 +88,11 @@ const Header = () => {
           <div className="md:hidden bg-background border-t border-border animate-fade-in" id="mobile-menu">
             <nav className="px-2 pt-6 pb-6 space-y-4" role="navigation" aria-label="Mobile navigation">
               <a
-                href="#mission"
+                href="#about"
                 className="block px-4 py-3 text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm font-medium tracking-wide uppercase text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Our Mission
+                About
               </a>
               <a
                 href="#programs"
@@ -82,6 +100,27 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Programs
+              </a>
+              <a
+                href="#gallery"
+                className="block px-4 py-3 text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm font-medium tracking-wide uppercase text-sm"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
+              </a>
+              <a
+                href="#events"
+                className="block px-4 py-3 text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm font-medium tracking-wide uppercase text-sm"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Events
+              </a>
+              <a
+                href="#staff"
+                className="block px-4 py-3 text-foreground hover:text-primary transition-all duration-500 accessibility-focus rounded-sm font-medium tracking-wide uppercase text-sm"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Staff
               </a>
               <a
                 href="#contact"

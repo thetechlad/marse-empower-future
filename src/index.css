@@ -33,10 +33,10 @@
     --muted: 0 0% 95%;
     --muted-foreground: 0 0% 45%;
 
-    /* Luxurious gold accent */
-    --accent: 45 100% 51%;
-    --accent-light: 45 100% 60%;
-    --accent-foreground: 0 0% 8%;
+    /* Vibrant accent colors */
+    --accent: 220 91% 65%;
+    --accent-light: 220 91% 75%;
+    --accent-foreground: 0 0% 100%;
 
     /* Success in deep green */
     --success: 120 100% 25%;
@@ -54,10 +54,11 @@
     /* Clean radius */
     --radius: 0.25rem;
 
-    /* Luxury gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(45 100% 60%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    /* Creative gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 91% 65%), hsl(270 85% 70%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(35 100% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 91% 98%), hsl(270 85% 98%));
+    --gradient-warm: linear-gradient(135deg, hsl(20 100% 90%), hsl(35 100% 85%));
 
     /* Sophisticated shadows */
     --shadow-luxury: 0 1px 3px hsl(0 0% 0% / 0.05);
